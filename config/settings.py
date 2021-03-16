@@ -75,12 +75,18 @@ TEMPLATES = [
     },
 ]
 
-WSGI_APPLICATION = 'heroku.wsgi.application'
+WSGI_APPLICATION = 'config.wsgi.application'
 
 
 # Configure database using DJ-Database-URL.
 # See docs at https://github.com/jacobian/dj-database-url#dj-database-url.
 
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.sqlite3',
+#         'NAME': 'db_django',
+#     }
+# }
 DATABASES = {
     # If DATABASE_URL environment variable isn't set, use Docker Compose Postgres database.
     'default': dj_database_url.config(
