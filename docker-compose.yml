@@ -35,7 +35,7 @@ services:
     environment:
       POSTGRES_USER: postgres
       POSTGRES_PASSWORD: 1234
-      POSTGRES_DB: djheroku
+      POSTGRES_DB: django
     volumes:
       - db_data:/var/lib/postgresql/data/
     ports:

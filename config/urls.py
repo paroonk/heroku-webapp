@@ -1,7 +1,7 @@
-"""djheroku URL Configuration
+"""heroku URL Configuration
 
 The `urlpatterns` list routes URLs to views. For more information please see:
-    https://docs.djangoproject.com/en/2.2/topics/http/urls/
+    https://docs.djangoproject.com/en/3.1/topics/http/urls/
 Examples:
 Function views
     1. Add an import:  from my_app import views
@@ -18,7 +18,7 @@ from django.contrib import admin
 from django.urls import include, path
 
 urlpatterns = [
-    path('', include('keygen.urls')),
+    path('', include('webapp.urls')),
     path('admin/', admin.site.urls),
     path('django-rq/', include('django_rq.urls')),
 ]
