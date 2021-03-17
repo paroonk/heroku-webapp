@@ -15,7 +15,6 @@ def generate_bg():
 
 def index(request):
     context = {'secrets': Secret.objects.all()}
-    print(Secret.objects.all())
     return render(request, 'webapp/index.html', context)
 
 def generate(request):
