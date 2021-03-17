@@ -1,5 +1,5 @@
 from django.apps import AppConfig
 
 
-class KeygenConfig(AppConfig):
-    name = 'keygen'
+class WebappConfig(AppConfig):
+    name = 'webapp'
