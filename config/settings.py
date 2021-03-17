@@ -82,19 +82,19 @@ WSGI_APPLICATION = 'config.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/3.1/ref/settings/#databases
 
-DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': 'db.sqlite3',
-    }
-}
 # DATABASES = {
-#     # If DATABASE_URL environment variable isn't set, use Docker Compose Postgres database.
-#     'default': dj_database_url.config(
-#         default='postgres://postgres:1234@db:5432/django',
-#         conn_max_age=600,
-#     )
+#     'default': {
+#         'ENGINE': 'django.db.backends.sqlite3',
+#         'NAME': 'db.sqlite3',
+#     }
 # }
+DATABASES = {
+    # If DATABASE_URL environment variable isn't set, use Docker Compose Postgres database.
+    'default': dj_database_url.config(
+        default='postgres://postgres:1234@db:5432/django',
+        conn_max_age=600,
+    )
+}
 
 
 # Password validation
